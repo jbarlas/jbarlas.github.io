@@ -51,7 +51,7 @@ var App = {
 
     linkedin: function(){
         this.echo();
-        this.echo("|  www.linkedin.com/in/jbarlas1");
+        this.echo("|  http://www.linkedin.com/in/jbarlas1");
         this.echo();
     },
 
@@ -128,7 +128,7 @@ var App = {
 
 jQuery(document).ready(function($) {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        window.location.href = "https://www.linkedin.com/profile/view?id=298500285";
+        window.location.href = "http://www.linkedin.com/in/jbarlas1";
     } else {
         $('body').terminal(App, {
             greetings: greetings.innerHTML,
