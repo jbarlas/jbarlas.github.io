@@ -100,23 +100,16 @@ var App = {
 
     credits: function(){
         this.echo();
-        this.echo("|  Site based on the personal website of " + commandText('Ronnie Pyne'));
         this.echo("|  Using " + commandText('Jquery Terminal Emulator') + " by " + commandText('Jakub Jankiewicz') + ": http://terminal.jcubic.pl");
         this.echo();
     },
 
 
     all: function(){
-        this.clear();
-        this.exec('motd');
         this.exec('about');
         this.exec('projects');
-        this.exec('skills');
-        this.exec('awards');
         this.exec('github');
         this.exec('linkedin');
-        this.exec('facebook');
-        this.exec('twitter');
         this.exec('contact');
         this.exec('credits');
     },
