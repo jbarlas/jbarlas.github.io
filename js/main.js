@@ -7,14 +7,15 @@ var titleText = function(text){
 }
 
 var App = {
-    
+    /*
     motd: function(ret){
         if (typeof ret === 'undefined') ret = false;
         var greetText = 
          
             "_____________________________________________________\n"+
+            "|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  |\n"+
             "|\tWelcome to my personal website!\t|\n"+
-            "|\tPlease type " + commandText('menu') + " for a list of commands.  \t\t\t\t\t\t\t\t\t|\n"+
+            "|\tPlease type " + commandText('help') + " for a list of commands.  \t\t\t\t\t\t\t\t\t|\n"+
             "|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  |\n"+
             "####################################################################################\n";
 
@@ -24,7 +25,7 @@ var App = {
             return greetText;
         }
     }
-    ,    
+    , */   
 
     help: function(){
         this.echo();
@@ -119,7 +120,7 @@ var App = {
     }
 }
 
-jQuery(document).ready(function($) {
+jQuery((function($) {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         window.location.href = "http://www.linkedin.com/in/jbarlas1";
     } else {
@@ -134,4 +135,4 @@ jQuery(document).ready(function($) {
             checkArity: false
         });
     }
-});
+}));
