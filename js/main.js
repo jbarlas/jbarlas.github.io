@@ -6,6 +6,16 @@ var titleText = function(text){
     return "[[u;inherit;]" + text + "]";
 }
 
+var AnimatedText = function(text, bool){
+    console.log(bool)
+    if (bool){
+        return this.echo(text, {typing: true, delay: 200});
+    }
+    else {
+        return this.echo(text)
+    }
+}
+
 var App = {
     /*
     motd: function(ret){
@@ -29,32 +39,55 @@ var App = {
 
     help: function(){
         this.echo();
-        this.echo("|  " + commandText("about") + "              - Summary of me");
-        this.echo("|  " + commandText("projects") + "           - Some recent projects of mine");
-        this.echo("|  " + commandText("experiences") + "             - What I can do");
+        this.echo("|  " + commandText("about") + "              > Summary of me");
+        this.echo("|  " + commandText("experiences") + "        > Work experiences");
+        this.echo("|  " + commandText("projects") + "           > A list of projects I've worked on"); 
         this.echo();
-        this.echo("|  " + commandText("github") + "             - Das github");
-        this.echo("|  " + commandText("linkedin") + "           - How I connect for work things");
+        this.echo("|  " + commandText("github") + "             > View my repositories on GitHub");
+        this.echo("|  " + commandText("linkedin") + "           > Connect with me on LinkedIn");
+        this.echo("|  " + commandText("resume") + "             > Returns my experiences and projects ");
+        this.echo("     --open             - Directly open link");
         this.echo();
-        this.echo("|  " + commandText("contact") + "            - Contact me")
-        this.echo("|  " + commandText("credits") + "            - Credits for this website");
+        this.echo("|  " + commandText("contact") + "            > Contact me")
+        this.echo("|  " + commandText("credits") + "            > Credits for this website");
         this.echo();
-        this.echo("|  " + commandText("all") + "                - Run all commands");
-        this.echo();
-    },
-
-    github: function(){
-        this.echo();
-        this.echo("|  http://www.github.com/jbarlas");
+        this.echo("|  " + commandText("all") + "                > Run all commands");
         this.echo();
     },
 
-
-    linkedin: function(){
-        this.echo();
-        this.echo("|  http://www.linkedin.com/in/jbarlas1");
-        this.echo();
+    github: function(link){
+        if (link == "--open"){
+            window.open("http://www.github.com/jbarlas", '_blank');
+        }
+        else {
+            this.echo();
+            this.echo("|  http://www.github.com/jbarlas");
+            this.echo();
+        }
     },
+
+
+    linkedin: function(link){
+        if (link == "--open"){
+            window.open("http://www.github.com/jbarlas", '_blank');
+        }
+        else {
+            this.echo();
+            this.echo("|  http://www.linkedin.com/in/jbarlas1");
+            this.echo();
+        }
+    },
+
+    resume: function(link){
+        if (link == "--open"){
+            window.open('files/Resume.pdf', '_blank');
+        }
+        else {
+            this.exec('experiences')
+            this.exec('projects')
+        }
+    },
+
 
 
     about: function(){
@@ -74,11 +107,12 @@ var App = {
 
     projects: function(){
         this.echo();
-        this.echo("|  " + commandText('Search') + "                                      Descriptions go here (:        ");
-        this.echo("|  " + commandText('Adversarial Search') + "                          Descriptions go here (:        ");
-        this.echo("|  " + commandText('Feature Matching') + "                            Descriptions go here (:        ");
-        this.echo("|  " + commandText('Neural Net Thing') + "                            Descriptions go here (:        ");
-        this.echo("|  " + commandText('Some Data Thing') + "                             Descriptions go here (:        ");
+        this.echo("|  " + commandText('Search') + ", Java                                Descriptions go here (:        ");
+        this.echo("|  " + commandText('Adversarial Search') + ", Python                  Descriptions go here (:        ");
+        this.echo("|  " + commandText('Feature Matching') + ", Python                    Descriptions go here (:        ");
+        this.echo("|  " + commandText('Neural Net Thing') + ", Python                    Descriptions go here (:        ");
+        this.echo("|  " + commandText('Some Data Thing') + ", Python (Pandas)            Descriptions go here (:        ");
+        this.echo("|  " + commandText('Chess') + ", Java                                 In progress implementation of chess with simple repl")
         this.echo();
     },
 
@@ -99,10 +133,12 @@ var App = {
         this.echo();
     },
 
-    credits: function(){
-        this.echo();
-        this.echo("|  Using " + commandText('Jquery Terminal Emulator') + " by " + commandText('Jakub Jankiewicz') + ": http://terminal.jcubic.pl");
-        this.echo();
+    credits: function(bool){
+        text = "\n|  Using " + commandText('Jquery Terminal Emulator') + " by " + commandText('Jakub Jankiewicz') + ": http://terminal.jcubic.pl\n"
+        if (bool){
+            this.echo(text, {typing: true, delay: 20});
+        }
+        else {this.echo(text);}
     },
 
 
@@ -126,6 +162,7 @@ jQuery((function($) {
     } else {
         $('body').terminal(App, {
             greetings: greetings.innerHTML,
+            prompt: "[[;plum;]>>> ]",
 
             onBlur: function() {
                 // prevent loosing focus

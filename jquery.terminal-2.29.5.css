@@ -120,20 +120,20 @@
      color: #000 !important;
  }
  .terminal .terminal-output > :not(.raw) a[href], .cmd a[href] {
-     color: #0F60FF;
-     color: var(--link-color, #0F60FF);
+     color: plum;
+     color: var(--link-color, plum);
      cursor: pointer;
  }
  .cmd a[href]:not(.terminal-inverted),
  .terminal .terminal-output > :not(.raw) a[href]:not(.terminal-inverted) {
-     --color: var(--link-color, #0F60FF);
+     --color: var(--link-color, plum);
  }
  .terminal .terminal-output > :not(.raw) a[href].terminal-inverted {
      background: var(--color, #ccc);
  }
  .terminal .terminal-output > :not(.raw) a[href]:hover, .cmd a[href]:hover {
-     background-color: #0F60FF;
-     background-color: var(--link-color, #0F60FF) !important;
+     background-color: plum;
+     background-color: var(--link-color, plum) !important;
      color: #000;
      color: var(--background, #000) !important;
      text-decoration: none;
@@ -144,16 +144,16 @@
       * shorter and simple solution
       * it's hard to overwrite long :not selector (:not(a span) don't work)
       */
-     color: #0F60FF !important;
-     --color: var(--link-color, #0F60FF);
-     color: var(--link-color, #0F60FF) !important;
+     color: plum !important;
+     --color: var(--link-color,plum);
+     color: var(--link-color, plum) !important;
      text-decoration: underline;
  }
  
  .terminal .terminal-output > :not(.raw) a[href]:hover span,
  .cmd a[href]:hover span {
-     background-color: #0F60FF !important;
-     background-color: var(--link-color, #0F60FF) !important;
+     background-color: plum !important;
+     background-color: var(--link-color, plum) !important;
      color: #000 !important;
      color: var(--background, #000) !important;
      text-decoration: none;
@@ -217,10 +217,11 @@
  .cmd span:not(.fas):not(.far):not(.fa) {
      font-family: monospace;
      font-family: var(--font, monospace);
+     font-size: 17px !important;
  }
  .terminal,
  .cmd {
-     font-size: 12px;
+     font-size: 17px;
  }
  .terminal-output > div:not(.raw) div::before {
      content: '\0200B';
@@ -527,6 +528,87 @@
          -ms-animation-name: terminal-bar;
              animation-name: terminal-bar;
  }
+ @-webkit-keyframes terminal-smooth {
+    0%, 100% {
+        left: 0;
+        color: plum;
+        color: var(--original-color, #aaa);
+        background-color: #000;
+        background-color: var(--background, #000);
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    50% {
+        left: 0;
+        color: #000;
+        background: plum;
+        -webkit-box-shadow: 0 0 5px var(--color, #aaa);
+        box-shadow: 0 0 5px var(--color, #aaa);
+        border: none;
+        padding: 0;
+        margin: 0;
+        border-bottom: 2px solid transparent;
+    }
+}
+@-moz-keyframes terminal-smooth {
+    0%, 100% {
+        left: 0;
+        color: plum;
+        color: var(--original-color, #aaa);
+        background-color: #000;
+        background-color: var(--background, #000);
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    50% {
+        left: 0;
+        color: #000;
+        background: plum;
+        -mox-box-shadow: 0 0 5px var(--color, #aaa);
+        box-shadow: 0 0 5px var(--color, #aaa);
+        border: none;
+        padding: 0;
+        margin: 0;
+        border-bottom: 2px solid transparent;
+    }
+}
+@keyframes terminal-smooth {
+    0%, 100% {
+        left: 0;
+        color: plum;
+        color: var(--original-color, #aaa);
+        background-color: #000;
+        background-color: var(--background, #000);
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    50% {
+        left: 0;
+        color: #000;
+        background: plum;
+        -webkit-box-shadow: 0 0 5px var(--color, #aaa);
+        box-shadow: 0 0 5px var(--color, #aaa);
+        border: none;
+        padding: 0;
+        margin: 0;
+        border-bottom: 2px solid transparent;
+    }
+}
+#css-cursor .terminal {
+    --background: #000;
+    --color: plum;
+    --animation: terminal-smooth;
+    text-shadow: 0 0 3px rgba(0,100,0,0.5);
+}
  /*
     Internet Explorer & Edge *, Safari ≤ 6
     source: https://w3reign.com/internet-explorer-edge-css-hacks/
@@ -763,10 +845,10 @@
      .cmd .cmd-cursor.cmd-blink .far,
      .cmd .cmd-cursor.cmd-blink .fas,
      .cmd .cmd-cursor.cmd-blink .emoji {
-         -webkit-animation: var(--animation, terminal-blink) 1s infinite linear;
-            -moz-animation: var(--animation, terminal-blink) 1s infinite linear;
-             -ms-animation: var(--animation, terminal-blink) 1s infinite linear;
-                 animation: var(--animation, terminal-blink) 1s infinite linear;
+         -webkit-animation: var(--animation, terminal-smooth) 1s infinite linear;
+            -moz-animation: var(--animation, terminal-smooth) 1s infinite linear;
+             -ms-animation: var(--animation, terminal-smooth) 1s infinite linear;
+                 animation: var(--animation, terminal-smooth) 1s infinite linear;
          --original-background: inherit;
      }
      .cmd .cmd-cursor.cmd-blink .emoji span {
