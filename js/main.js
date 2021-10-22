@@ -47,7 +47,7 @@ var App = {
         this.echo("|  " + commandText("github") + "             > View my repositories on GitHub");
         this.echo("|  " + commandText("linkedin") + "           > Connect with me on LinkedIn");
         this.echo("|  " + commandText("resume") + "             > Returns my experiences and projects");
-        this.echo("     --open             - Use this flag to drectly open link");
+        this.echo("     --open             - Use this flag to directly open link");
         this.echo();
         this.echo("|  " + commandText("contact") + "            > Contact me")
         this.echo("|  " + commandText("credits") + "            > Credits for this website");
@@ -104,7 +104,7 @@ var App = {
         this.echo("|  Bio:               I am a student interested in the intersection of math/cs and urban issues, and especially passionate about education equity.\n" +
                   "                      My goal is to bridge these two interests, combining education and technology in a way that is accessible to all.");
         this.echo();
-        this.echo("|  Interests:         Ultimate frisbee, longboarding, esports, traveling, guitar, and chess");
+        this.echo("|  Interests:         Ultimate frisbee, longboarding, esports, traveling, hiking, and chess");
         this.echo();
     },
 
@@ -143,7 +143,7 @@ var App = {
         this.echo();
         this.echo("|  " + commandText('Undergraduate Math Project') + ", [[i;;]Participant]     > Conducted research in number theory investigating repeating decimals, \n" + 
                   "     Summer 2020                                   aiming to determine patterns in their period \n" +
-                  "                                               > Colaborated in the research process with two other students to help develop rigorous proofs \n" + 
+                  "                                               > Collaborated in the research process with two other students to help develop rigorous proofs \n" + 
                   "                                               > Authored findings in a short research paper under the direction of a faculty advisor")
         this.echo();
     },
