@@ -9,4 +9,4 @@
         ░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░╚═╝╚═╝░░╚══╝  ╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═════╝░
 
 
-This is my personal website! Feel free to poke around, type *help* for a list of all commands!
+This is my personal website! Feel free to poke around, type **help** for a list of all commands!
