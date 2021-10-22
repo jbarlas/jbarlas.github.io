@@ -84,9 +84,9 @@ var App = {
             window.open('files/Resume.pdf', '_blank');
         }
         else {
-            this.exec('experiences')
-            this.exec('projects')
-            this.exec('proficiencies')
+            this.exec('exp')
+            this.exec('proj')
+            this.exec('lang')
         }
     },
 
