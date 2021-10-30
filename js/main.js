@@ -47,7 +47,7 @@ var App = {
         this.echo("|  " + commandText("github") + "             > View my repositories on GitHub");
         this.echo("|  " + commandText("linkedin") + "           > Connect with me on LinkedIn");
         this.echo("|  " + commandText("resume") + "             > Returns my experiences and projects");
-        this.echo("     --open             - Use this flag to directly open link");
+        this.echo("     --open             - Use this flag to directly open the links");
         this.echo();
         this.echo("|  " + commandText("contact") + "            > Contact me")
         this.echo("|  " + commandText("credits") + "            > Credits for this website");
@@ -150,9 +150,9 @@ var App = {
 
     lang: function(){
         this.echo();
+        this.echo("|  " + commandText('Python') + "             [#####################    ]");
         this.echo("|  " + commandText('Java') + "               [###################      ]");
-        this.echo("|  " + commandText('Python') + "             [##################       ]");
-        this.echo("|  " + commandText('Stata') + "              [###############          ]");
+        this.echo("|  " + commandText('Stata') + "              [#################        ]");
         this.echo("|  " + commandText('MATLAB') + "             [#############            ]");
         this.echo("|  " + commandText('Javascript') + "         [##########               ]");
         this.echo("|  " + commandText('HTML') + "               [#########                ]")
