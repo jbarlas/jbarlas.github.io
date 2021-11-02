@@ -119,7 +119,7 @@ var App = {
         this.echo("|  " + commandText('Adversarial Search') + ", [[i;;]Python]                  > Implements adversarial search algorithms minimax and alpha-beta pruning to solve instances of tic-tac-toe and connect 4\n");
         this.echo("|  " + commandText('Personal Website') + ", [[i;;]Javascript, HTML]          > Personal website created with JQuery Terminal library in Javascript and HTML\n");
         this.echo("|  " + commandText('Search') + ", [[i;;]Java]                                > Search program with simple repl to handle user queries; the search parses XML files, and determines word relevancy \n" + 
-                  "                                                  using idf and term frequency, and dermines document authroity through implementing PageRank to score documents\n");
+                  "                                                  using idf and term frequency, and determines document authority through implementing PageRank to score documents\n");
         this.echo("|  " + commandText('stdpNeuralNet') + ", [[i;;]Python]                       > In progress implementation a spike timing dependent plasticity neural network\n");
         this.echo("|  " + commandText('Some Data Thing') + ", [[i;;]Python (Pandas)]            > In progress analysis of Overwatch League data gathered from Kaggle\n");
         this.echo("|  " + commandText('Chess') + ", [[i;;]Java]                                 > In progress implementation of chess with simple repl\n")
@@ -135,8 +135,8 @@ var App = {
         this.echo("|  " + commandText('Teaching Assistant') + ", [[i;;]Computer Science TA]     > Hold office hours for students to ask questions in Pyret (functional) and Python (object oriented) \n" +
                   "     Aug 2021-Present                          > Lead lab section with 25 students per week, supplementing their understanding of the course material\n");
         this.echo();
-        this.echo("|  " + commandText('Annenberg Insititute') + ", [[i;;]Fellow]                > Used Stata to clean and summarize data collected from an experiment \n" + 
-                  "     Summmer 2021                                  which was designed to aid student socioemotional development through a texting program\n" +
+        this.echo("|  " + commandText('Annenberg Institute') + ", [[i;;]Fellow]                > Used Stata to clean and summarize data collected from an experiment \n" + 
+                  "     Summer 2021                                   which was designed to aid student socioemotional development through a texting program\n" +
                   "                                               > Performed tasks such as merging and reshaping data sets, creating summary tables, and running linear regressions\n" + 
                   "                                               > Collaborated with two other undergraduate fellows to assist the research team \n" + 
                   "                                                   in data analysis and performing a literature review")                                       
