@@ -70,7 +70,7 @@ var App = {
 
     linkedin: function(link){
         if (link == "--open" || link =="-o"){
-            window.open("http://www.github.com/jbarlas", '_blank');
+            window.open("http://www.linkedin.com/in/jbarlas1", '_blank');
         }
         else {
             this.echo();
@@ -135,7 +135,7 @@ var App = {
         this.echo("|  " + commandText('Teaching Assistant') + ", [[i;;]Computer Science TA]     > Hold office hours for students to ask questions in Pyret (functional) and Python (object oriented) \n" +
                   "     Aug 2021-Present                          > Lead lab section with 25 students per week, supplementing their understanding of the course material\n");
         this.echo();
-        this.echo("|  " + commandText('Annenberg Institute') + ", [[i;;]Fellow]                > Used Stata to clean and summarize data collected from an experiment \n" + 
+        this.echo("|  " + commandText('Annenberg Institute') + ", [[i;;]Fellow]                 > Used Stata to clean and summarize data collected from an experiment \n" + 
                   "     Summer 2021                                   which was designed to aid student socioemotional development through a texting program\n" +
                   "                                               > Performed tasks such as merging and reshaping data sets, creating summary tables, and running linear regressions\n" + 
                   "                                               > Collaborated with two other undergraduate fellows to assist the research team \n" + 
