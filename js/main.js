@@ -17,25 +17,6 @@ var AnimatedText = function(text, bool){
 }
 
 var App = {
-    /*
-    motd: function(ret){
-        if (typeof ret === 'undefined') ret = false;
-        var greetText = 
-         
-            "_____________________________________________________\n"+
-            "|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  |\n"+
-            "|\tWelcome to my personal website!\t|\n"+
-            "|\tPlease type " + commandText('help') + " for a list of commands.  \t\t\t\t\t\t\t\t\t|\n"+
-            "|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  |\n"+
-            "####################################################################################\n";
-
-        if (!ret) {
-            this.echo("\n" + greetText);
-        } else {
-            return greetText;
-        }
-    }
-    , */   
 
     help: function(){
         this.echo();
@@ -114,14 +95,16 @@ var App = {
 
     proj: function(){
         this.echo();
-        this.echo("|  " + commandText('Feature Matching') + ", [[i;;]Python]                    > Local feature matching algorithm which gathers interest points from two input images through Harris corner detector\n" + 
-        "                                                  detects features using a SIFT-like algorithm, matches features between images using NNDR\n");
-        this.echo("|  " + commandText('Adversarial Search') + ", [[i;;]Python]                  > Implements adversarial search algorithms minimax and alpha-beta pruning to solve instances of tic-tac-toe and connect 4\n");
+        this.echo("|  " + commandText('Game Night') + ", [[i;;]Python]                    > Computer Vision final project which given an image of a tic-tac-toe board or a game of connect four, will detect\n" + 
+        "                                                  the current game state and use an adversarial search algorithm to return the optimal strategy for the given position\n");
+        this.echo("|  " + commandText('6stack') + ", [[i;;]Javascript]                  > Full-stack application using MERN stack with Redux; the app allows the user to look up and store player statistics\n" +
+        "                                                  for Overwatch, fetching data from ow-api\n");
+        this.echo("|  " + commandText('TRON') + ", [[i;;]Python]                  > Artificial Intelligence final project where a partner and I coded a bot to play the game TRON using alpha-beta pruning\n" +
+        "                                                  and a Voronoi heuristic to determine the next best move\n");
         this.echo("|  " + commandText('Personal Website') + ", [[i;;]Javascript, HTML]          > Personal website created with JQuery Terminal library in Javascript and HTML\n");
         this.echo("|  " + commandText('Search') + ", [[i;;]Java]                                > Search program with simple repl to handle user queries; the search parses XML files, and determines word relevancy \n" + 
                   "                                                  using idf and term frequency, and determines document authority through implementing PageRank to score documents\n");
         this.echo("|  " + commandText('stdpNeuralNet') + ", [[i;;]Python]                       > In progress implementation a spike timing dependent plasticity neural network\n");
-        this.echo("|  " + commandText('Some Data Thing') + ", [[i;;]Python (Pandas)]            > In progress analysis of Overwatch League data gathered from Kaggle\n");
         this.echo("|  " + commandText('Chess') + ", [[i;;]Java]                                 > In progress implementation of chess with simple repl\n")
         this.echo();
     },
