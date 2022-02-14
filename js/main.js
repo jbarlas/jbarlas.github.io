@@ -95,15 +95,15 @@ var App = {
 
     proj: function(){
         this.echo();
-        this.echo("|  " + commandText('Game Night') + ", [[i;;]Python]                    > Computer Vision final project which given an image of a tic-tac-toe board or a game of connect four, will detect\n" + 
-        "                                                  the current game state and use an adversarial search algorithm to return the optimal strategy for the given position\n");
-        this.echo("|  " + commandText('6stack') + ", [[i;;]Javascript]                  > Full-stack application using MERN stack with Redux; the app allows the user to look up and store player statistics\n" +
-        "                                                  for Overwatch, fetching data from ow-api\n");
-        this.echo("|  " + commandText('TRON') + ", [[i;;]Python]                  > Artificial Intelligence final project where a partner and I coded a bot to play the game TRON using alpha-beta pruning\n" +
-        "                                                  and a Voronoi heuristic to determine the next best move\n");
+        this.echo("|  " + commandText('Game Night') + ", [[i;;]Python]                          > Computer Vision final project which given an image of a tic-tac-toe board or a game of connect four, will detect\n" + 
+        "                                                              the current game state and use an adversarial search algorithm to return the optimal strategy for the given position\n");
+        this.echo("|  " + commandText('6stack') + ", [[i;;]Javascript]                          > Full-stack application using MERN stack with Redux; the app allows the user to look up and store player statistics\n" +
+        "                                                              for Overwatch, fetching data from ow-api\n");
+        this.echo("|  " + commandText('TRON') + ", [[i;;]Python]                                > Artificial Intelligence final project where a partner and I coded a bot to play the game TRON using alpha-beta pruning\n" +
+        "                                                              and a Voronoi heuristic to determine the next best move\n");
         this.echo("|  " + commandText('Personal Website') + ", [[i;;]Javascript, HTML]          > Personal website created with JQuery Terminal library in Javascript and HTML\n");
         this.echo("|  " + commandText('Search') + ", [[i;;]Java]                                > Search program with simple repl to handle user queries; the search parses XML files, and determines word relevancy \n" + 
-                  "                                                  using idf and term frequency, and determines document authority through implementing PageRank to score documents\n");
+                  "                                                    using idf and term frequency, and determines document authority through implementing PageRank to score documents\n");
         this.echo("|  " + commandText('stdpNeuralNet') + ", [[i;;]Python]                       > In progress implementation a spike timing dependent plasticity neural network\n");
         this.echo("|  " + commandText('Chess') + ", [[i;;]Java]                                 > In progress implementation of chess with simple repl\n")
         this.echo();
