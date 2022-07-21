@@ -83,7 +83,7 @@ var App = {
                   "                      Sc.B. Candidate Applied Mathematics – Computer Science, Urban Studies; 4.0 GPA");
         this.echo();
         this.echo("|  Bio:               I am a student interested in the intersection of math/cs and urban issues, and especially passionate about education equity.\n" +
-                  "                      My goal is to bridge these two interests, combining education and technology in a way that is accessible to all.");
+                  "                      My goal is to bridge these two interests, using technology to solve urban problems.");
         this.echo();
         this.echo("|  Interests:         Ultimate frisbee, longboarding, esports, traveling, hiking, and chess");
         this.echo();
@@ -111,18 +111,21 @@ var App = {
 
     exp: function(){
         this.echo();
+        this.echo("|  " + commandText('Verily') + ", [[i;;]Software Engineer Intern]            > Programmed a customer-facing web application using Angular and Flask \n" +
+                  "     Nov 2016-Present                          > Developed test suite using Cypress for UI end-to-end testing and Pytest for backend routes and logic \n" +
+                  "                                               > Communicated with a UX design team and four other engineers to integrate the application in an agile development environment");
+        this.echo("|  " + commandText('Annenberg Institute') + ", [[i;;]Research Assistant]     > Create a REPL in Python which interacts with Twitter’s API to scrape tweet data \n" + 
+                  "     June 2021-Present                               from school district twitter pages to analyze tutoring policy \n" +
+                  "                                               > Performed tasks such as merging and reshaping data sets, creating summary tables, and running linear regressions\n" + 
+                  "                                               > Used Stata to clean and summarize data collected from an experiment \n" + 
+                  "                                                     which was designed to aid student socioemotional development through a texting program")                                       
+        this.echo("|  " + commandText('Brown University') + ", [[i;;]Computer Science TA]       > Hold office hours for students to ask questions in Pyret (functional) and Python (object oriented) \n" +
+                  "     Aug 2021-Present                          > Lead lab section with 25 students per week, supplementing their understanding of the course material\n");
+        this.echo();
+        this.echo();
         this.echo("|  " + commandText('Self-employed') + ", [[i;;]Tutor]                        > Explain key concepts in subjects in mathematics ranging from Algebra I to Calculus II \n" +
                   "     Nov 2016-Present                          > Mentor 2-3 students per week on college admissions, providing insight on SAT/ACT content preparation\n" +
                   "                                               > Create curricula to focus student learning, collaborating with parents to ensure maximum student growth");
-        this.echo();
-        this.echo("|  " + commandText('Teaching Assistant') + ", [[i;;]Computer Science TA]     > Hold office hours for students to ask questions in Pyret (functional) and Python (object oriented) \n" +
-                  "     Aug 2021-Present                          > Lead lab section with 25 students per week, supplementing their understanding of the course material\n");
-        this.echo();
-        this.echo("|  " + commandText('Annenberg Institute') + ", [[i;;]Fellow]                 > Used Stata to clean and summarize data collected from an experiment \n" + 
-                  "     Summer 2021                                   which was designed to aid student socioemotional development through a texting program\n" +
-                  "                                               > Performed tasks such as merging and reshaping data sets, creating summary tables, and running linear regressions\n" + 
-                  "                                               > Collaborated with two other undergraduate fellows to assist the research team \n" + 
-                  "                                                   in data analysis and performing a literature review")                                       
         this.echo();
         this.echo("|  " + commandText('Undergraduate Math Project') + ", [[i;;]Participant]     > Conducted research in number theory investigating repeating decimals, \n" + 
                   "     Summer 2020                                   aiming to determine patterns in their period \n" +
@@ -133,12 +136,14 @@ var App = {
 
     lang: function(){
         this.echo();
-        this.echo("|  " + commandText('Python') + "             [#####################    ]");
-        this.echo("|  " + commandText('Java') + "               [###################      ]");
-        this.echo("|  " + commandText('Stata') + "              [#################        ]");
-        this.echo("|  " + commandText('MATLAB') + "             [#############            ]");
-        this.echo("|  " + commandText('Javascript') + "         [##########               ]");
-        this.echo("|  " + commandText('HTML') + "               [#########                ]")
+        this.echo("|  " + commandText('Python'));
+        this.echo("|  " + commandText('Java'));
+        this.echo("|  " + commandText('Typescript'));
+        this.echo("|  " + commandText('Stata'));
+        this.echo("|  " + commandText('MATLAB'));
+        this.echo("|  " + commandText('Javascript'));
+        this.echo("|  " + commandText('HTML'))
+        this.echo("|  " + commandText('SQL'))
         this.echo();
     },
 
